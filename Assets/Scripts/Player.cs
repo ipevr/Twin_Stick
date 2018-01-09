@@ -12,10 +12,11 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float yAxis = Input.GetAxis ("Vertical");
-		float xAxis = Input.GetAxis ("Horizontal");
+		float yAxis = CrossPlatformInputManager.GetAxis ("Vertical");
+		float xAxis = CrossPlatformInputManager.GetAxis ("Horizontal");
 		if (xAxis != 0 || yAxis != 0) {
-			print (xAxis + " " + yAxis);
+			Debug.Log ("H: " + xAxis);
+			Debug.Log ("V: " + yAxis);
 		}
 	}
 }
